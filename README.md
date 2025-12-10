@@ -4,3 +4,14 @@ The Candle project is a demonstration of the CTRE CANDle device.
 
 The candle is a CAN based driver for addressable LEDs. THe CANDle has eight LEDs built-in.
 The candle also can drive an LED string of lights.
+
+## Code Formatting with Spotless
+
+Code formatting must conform to spotless settings. You can make sure your code is formatted
+correcttly by running `spotlessApply` from the "WPILib Run a command in Gradle" command.
+
+Spotless changes should be squashed into your existing commits. Specifically, spotless-only
+commits are discouraged.
+
+CI will enforce the spotless settings and fail any merge that does not conform. So, you
+might as well run `spotlessAppply`.
