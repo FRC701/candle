@@ -15,3 +15,10 @@ commits are discouraged.
 
 CI will enforce the spotless settings and fail any merge that does not conform. So, you
 might as well run `spotlessAppply`.
+
+## TODO
+
+1. Remove example subsystems and commands
+2. Add candle subsystem
+3. Add candle commands
+4. Add bindings to the candle commands (probably to the dashboard)
