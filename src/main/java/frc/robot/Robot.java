@@ -4,23 +4,13 @@
 
 package frc.robot;
 
+import com.ctre.phoenix6.controls.*;
+import com.ctre.phoenix6.hardware.CANdle;
+import com.ctre.phoenix6.signals.RGBWColor;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 
-
-import com.ctre.phoenix6.controls.*;
-import com.ctre.phoenix6.hardware.CANdle;
-import com.ctre.phoenix6.configs.CANdleConfiguration;
-import com.ctre.phoenix6.signals.AnimationDirectionValue;
-import com.ctre.phoenix6.signals.StatusLedWhenActiveValue;  
-import com.ctre.phoenix6.signals.StripTypeValue;   
-import com.ctre.phoenix6.signals.RGBWColor;
-
-import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj.util.Color;
 /**
  * The methods in this class are called automatically corresponding to each mode, as described in
  * the TimedRobot documentation. If you change the name of this class or the package after creating
@@ -28,26 +18,24 @@ import edu.wpi.first.wpilibj.util.Color;
  */
 public class Robot extends TimedRobot {
 
-  private static final RGBWColor kYellow = new RGBWColor ();
+  private static final RGBWColor kYellow = new RGBWColor();
   private static final RGBWColor kMint = new RGBWColor();
   private static final RGBWColor kRed = new RGBWColor();
   private static final RGBWColor kWhite = new RGBWColor();
   private static final RGBWColor kGray = new RGBWColor();
-  //Colors we can use? Not sure how "mint" and "gray" will work out 
-  // RGBW colors include Red, Green Blue, and White 
+  // Colors we can use? Not sure how "mint" and "gray" will work out
+  // RGBW colors include Red, Green Blue, and White
 
   private static final int kSlot0Start = 1;
   private static final int kSlot0End = 8;
 
-  private final CANdle m_candle = new CANdle (1,"rio")
+  private final CANdle m_candle = new CANdle(1, "rio");
 
   private enum AnimationType {
-    Fire, 
-    SingleFade, 
-    Twinkle, 
+    Fire,
+    SingleFade,
+    Twinkle,
   }
-
- 
 
   private Command m_autonomousCommand;
 
